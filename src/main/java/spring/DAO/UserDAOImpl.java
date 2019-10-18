@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @SuppressWarnings("ALL")
 @Repository
-public class UserDAOArrayImpl implements UserDAO {
+public class UserDAOImpl implements UserDAO {
 
     private SessionFactory sessionFactory;
 
@@ -56,48 +56,4 @@ public class UserDAOArrayImpl implements UserDAO {
         session.update(user);
     }
 
-//    private static AtomicInteger id = new AtomicInteger(0);
-//    private static Map<Integer,User> map = new HashMap<>();
-//    static {
-//        User user = new User();
-//        User user1 = new User();
-//        user.setName("vasya");
-//        user.setPassword("1");
-//        user.setLogin("1");
-//        user.setId(id.getAndIncrement());
-//        map.put(user.getId(),user);
-//        user1.setName("kolya");
-//        user1.setPassword("2");
-//        user1.setLogin("2");
-//        user1.setId(id.getAndIncrement());
-//        map.put(user1.getId(),user1);
-//    }
-//
-//    @Override
-//    public List<User> getAll() {
-//        return new ArrayList<>(map.values());
-//    }
-//
-//    @Override
-//    public void add(User user) {
-//        user.setId(id.getAndIncrement());
-//        map.put(user.getId(),user);
-//    }
-//
-//    @Override
-//    public User getById(long id) {
-//        return map.get(id);
-//    }
-//
-//    @Override
-//    public void delete(long id) {
-//        map.remove(id);
-//    }
-//
-//    @Override
-//    public void updateUser(int idUser, String name) {
-//        User user = getById(idUser);
-//        user.setName(name);
-//        map.put(idUser,user);
-//    }
 }

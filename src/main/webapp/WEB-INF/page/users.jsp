@@ -30,10 +30,10 @@
                 <td>
                     <a href="/edit/${user.id}">Редактировать</a>
                     <a href="/delete/${user.id}">Удалить</a>
-                    <form action="/delete/${user.id}" method="get">
-                        <input type="hidden" name="id" value="${user.id}">
-                        <input type="submit" name="delete" value="Удалить"/>
-                    </form>
+<%--                    <form action="/delete/${user.id}" method="get">--%>
+<%--                        <input type="hidden" name="id" value="${user.id}">--%>
+<%--                        <input type="submit" name="delete" value="Удалить"/>--%>
+<%--                    </form>--%>
                 </td>
             </tr>
         </c:forEach>

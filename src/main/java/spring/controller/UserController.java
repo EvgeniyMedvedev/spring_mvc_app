@@ -47,7 +47,7 @@ public class UserController {
     public ModelAndView editFilm(@ModelAttribute("user") User user) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
-        service.updateUser(user.getId(),user.getName());
+        service.updateUser(user.getId(),user.getName(),user.getLogin(),user.getPassword());
 
         return modelAndView;
     }
