@@ -53,6 +53,8 @@ public class UserDAOImpl implements UserDAO {
         Session session = sessionFactory.getCurrentSession();
         User user = getById(idUser);
         user.setName(name);
+        user.setLogin(login);
+        user.setPassword(password);
         session.update(user);
     }
 
