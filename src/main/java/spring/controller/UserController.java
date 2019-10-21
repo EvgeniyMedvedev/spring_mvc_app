@@ -65,6 +65,7 @@ public class UserController {
     public ModelAndView deleteFilm(@PathVariable("id") int id) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
+        User user = service.getById(id);
         service.delete(id);
 
         return modelAndView;
